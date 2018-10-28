@@ -15,7 +15,6 @@ const TodoList = (props) => {
     let {todos,pageNum,orderType} = props
     let {length:total} = props.todos
     const length = total>3?3:total
-
     if(Math.abs(orderType) === 1){
         todos = todos.sort((a,b)=>(a.create_time - b.create_time)*orderType>0)
     }else if(Math.abs(orderType) === 2){
@@ -26,9 +25,6 @@ const TodoList = (props) => {
             return a.text < b.text
         })
     }
-
-    // console.log(todos)
-    // window.todos = todos
 
     const _todos = todos.slice(3*(pageNum-1),3*pageNum)
 
@@ -51,6 +47,7 @@ const TodoList = (props) => {
         <div
             style={{
                 textAlign:'center',
+                display:(total?'':'none')
             }}
             >
                 <Pagination simple

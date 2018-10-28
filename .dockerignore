@@ -1,0 +1,8 @@
+.DS_Store
+ npm-debug.log*
+ selenium-debug.log
+ .nuxt/
+ /package-lock.json
+ *.tar
+ *.md
+ yarn-error.log

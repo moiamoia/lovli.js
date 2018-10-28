@@ -66,3 +66,5 @@ If you find any issues, please report them via [Github Issues](https://github.co
 
 ### License
 (MIT)
+
+docker run -d -p 29015:29015 --name rethink1 rethinkdb
